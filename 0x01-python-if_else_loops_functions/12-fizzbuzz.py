@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def fizzbuzz():
-    """For multiples of five, print Buzz instead of the number  
+    """Print the numbers from 1 to 100 separated y a space
+    For multiples of five, print Buzz instead of the number  
     For multiples of three , print Fizz instead of te number
     For multiples of three and five, print Fizzbuzz instead of the number
     """
