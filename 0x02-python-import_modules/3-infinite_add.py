@@ -7,4 +7,4 @@ if __name__ == "__main__":
     summ = 0
     for i in range(len(sys.argv) - 1):
         summ += int(sys.argv[i + 1])
-    print9"{}".format(summ))
+    print("{}".format(summ))
