@@ -1,34 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 /**
-  *find_listint_loop - finds the loop in a linked list
-  *@head: pointer to a first node in a list
-  *
-  *Return: address of node loop starts else NULL if it fails
-  */
-listint_t *find_listint_loop(listint_t *head)
+* print_listint - prints all elements of a listint_t list
+* @h: pointer to head of list
+* Return: number of nodes
+*/
+size_t print_listint(const listint_t *h)
 {
-	listint_t *fast, *slow;
+	const listint_t *ptr;
+	unsigned int n;
 
-	if (head == NULL || head->next == NULL)
-		return (NULL);
-
-	slow = head->next;
-	fast = (head->next)->next;
-
-	while (fast != NULL)
+	ptr = h;
+	n = 0;
+	while (ptr != NULL)
 	{
-		if (slow == fast)
-		{
-			slow = head;
-			while (slow != fast)
-			{
-				slow = slow->next;
-				fast = fast->next;
-			}
-			return (slow);
-		}
-		slow = slow->next;
-		fast = (fast->next;
+		printf("%i\n", ptr->n);
+		ptr = ptr->next;
+		n++;
 	}
-	return (NULL);
+	return (n);
+}
+/**
+* add_nodeint - adds a new node at the beginning of a listint_t list
+* @head: pointer to a pointer of the start of the list
+* @n: integer to be added int the node
+* Return: address of the new element or NULL if it fails
+*/
+listint_t *add_nodeint(listint_t **head, const int n)
+{
+	listint_t *newnode;
+
+	newnode = malloc(sizeof(listint_t));
+
+	if (newnode == NULL)
+		return (NULL);
+	newnode->n = n;
+	newnode->next = *head;
+	*head = newnode;
+	return (newnode);
+}
+/**
+* free_listint - frees a listint_t list
+* @head: pointer to list to be freed
+* Return: void
+*/
+void free_listint(listint_t *head)
+{
+	listint_t *ptr;
+
+	while (head != NULL)
+	{
+		ptr = head;
+		head = head->next;
+		free(ptr);
+	}
 }
