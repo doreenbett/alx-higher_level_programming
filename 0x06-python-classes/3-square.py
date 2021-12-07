@@ -8,7 +8,8 @@ class Square:
     def __init__(self, size=0):
         """Introduces a private instance of
         Attribute: size
-        Size must e an integer, else raise a TypeError and must not be less than 0
+        Size must be an integer, else raise a
+        TypeError and must not be less than 0
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
