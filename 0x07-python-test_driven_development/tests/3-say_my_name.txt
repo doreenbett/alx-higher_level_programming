@@ -1,0 +1,33 @@
+# 3-say_my_name.txt
+This doctest checks a functon that prints My name is <first name> <last name>
+import module
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+First and lastname
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+The parameters must be strings else, a TypeError is raised
+>>> say_my_name(2, "Pesh")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Ray", ["Santi", "Cruz", "Bill"])
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name({"Ray": 2, "Pesh": 23}, 5.5)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+One name must atleast be provided
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
