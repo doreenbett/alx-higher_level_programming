@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Represent a rectangle.
-    Attributes: number_of_instances (int): The number of Rectangle instances	    
+    Attributes: number_of_instances (int): The number of Rectangle instances
     """
 
     number_of_instances = 0
