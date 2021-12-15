@@ -9,6 +9,7 @@ class Rectangle:
         """Initialize a new Rectangle.
         Arguments: width (int) and height (int) of the rectangle
         """
+        type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
