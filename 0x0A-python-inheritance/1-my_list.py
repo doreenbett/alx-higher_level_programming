@@ -2,7 +2,7 @@
 """Defines an inherited list class Mylist."""
 
 
-Class Mylist(list):
+class Mylist(list):
     """Implements sorted printing for the  built-in list class"""
 
     def print_sorted(self):
