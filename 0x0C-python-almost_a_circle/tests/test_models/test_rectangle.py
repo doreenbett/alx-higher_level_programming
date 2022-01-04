@@ -5,7 +5,6 @@ from models.base import Base
 from models.rectangle import Rectangle
 
 
-
 class TestRectangle_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the Rectangle class."""
 
@@ -15,6 +14,7 @@ class TestRectangle_instantiation(unittest.TestCase):
     def test_no_args(self):
         with self.assertRaises(TypeError):
             Rectangle()
+
     def test_one_arg(self):
         with self.assertRaises(TypeError):
             Rectangle(1)
