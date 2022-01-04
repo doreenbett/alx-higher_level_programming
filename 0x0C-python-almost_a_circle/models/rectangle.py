@@ -94,6 +94,32 @@ class Rectangle(Base):
             [print("#", end="") for w in range(self.width)]
             print("")
 
+    def update(self, *args):
+        """Update the Rectangle.
+        Args:
+            *args (ints): New attribute values
+                :1st argument rep id attribute
+                :2nd argument rep width attribute
+                :3rd argument rep height attribute
+                :4th argument rep x attribute
+                :5th argument rep y attribute
+        """
+        if args and len(args) != 0:
+            a = 0
+            for arg in args:
+                if a == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif a == 1:
+                    self.width = arg
+                elif a == 2:
+                    self.height = arg
+                elif a == 4:
+                    self.y = arg
+                a += 1
+
     def __str__(self):
         """Return the print() and str() representation of the Rectangle."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
