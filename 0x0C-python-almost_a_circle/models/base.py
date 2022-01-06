@@ -27,6 +27,6 @@ class Base:
         """Return the JSON serialization of a list of dicts
         Args: list_dictionaries (list): A list of dictionaries
         """
-        if list_dictionaries is None orlist_dictionaries == []:
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
