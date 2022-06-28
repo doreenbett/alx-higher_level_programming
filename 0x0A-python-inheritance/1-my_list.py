@@ -6,8 +6,8 @@
 
 
 class MyList(list):
-    """ Method that prints the sorted list """
+    """Implements sorted printing for the built-in list class."""
+
     def print_sorted(self):
-        l_sorted = self.copy()
-        l_sorted.sort()
-        print(l_sorted)
+        """Print a list in sorted ascending order."""
+        print(sorted(self))
