@@ -14,4 +14,8 @@ if __name__ == '__main__':
     states = cur.fetchall()
 
     for state in states:
+<<<<<<< HEAD
         print(state)      
+=======
+        print(state)
+>>>>>>> 2156175ffe1ee21e41453420055c1ce549eef3b7
